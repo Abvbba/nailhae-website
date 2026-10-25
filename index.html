@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#111111">
+<title>nailhae · Nails for today, tomorrow, everyday</title>
+<meta name="description" content="nailhae. Nails for today, tomorrow, everyday. For everyone. Chrome, 3D and hand-painted sets by appointment in the Arts District, Los Angeles.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500&family=Geist+Mono:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="css/site.css">
+<link rel="preload" as="image" href="img/l/06.webp">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="nailhae">
+<meta property="og:title" content="nailhae">
+<meta property="og:description" content="Nails for today, tomorrow, everyday. For everyone. Chrome, 3D and hand-painted sets by appointment in the Arts District, Los Angeles.">
+<meta property="og:image" content="og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+</head>
+<body>
+<script>
+  /* Motion is opt-out: reduced-motion visitors (and any load where GSAP fails) get the static book. */
+  (function () {
+    var d = document.documentElement;
+    d.classList.add("js");
+    if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      d.classList.add("motion", "intro");
+      if (innerWidth >= 768) d.classList.add("desk");
+      setTimeout(function () { d.classList.remove("intro"); }, 3000);
+    }
+  })();
+</script>
+
+<a class="skip" href="#sets">Skip to the canvas</a>
+
+<!-- Fixed UI: the bar at the bottom and a scroll gauge on the right edge -->
+<nav class="ui-nav" aria-label="Sections"><div class="ui-nav-in">
+  <a class="nav-brand" href="#top" data-go="top"><span class="chrome">nailhae</span><sup>®</sup></a>
+  <a class="nav-link" href="#sets" data-go="sets">Canvas</a>
+  <a class="nav-link" href="#studio" data-go="studio">Studio</a>
+  <a class="nav-link" href="#book" data-go="book">Book</a>
+</div></nav>
+
+<div class="ui-gauge" aria-hidden="true"><span class="ui-gauge-fill"></span></div>
+<div class="ui-scene" aria-hidden="true"><span class="ui-scene-n">(01)</span> <span class="ui-scene-name">Cover</span></div>
+
+<main>
+  <!-- SCENES 01–03 share one stage: cover → orbit → sets -->
+  <section class="stage" id="top" aria-label="nailhae">
+
+    <!-- 01 · Cover: rotating photo header behind chrome type -->
+    <div class="layer hero" id="cover">
+      <figure class="hero-media" aria-roledescription="slideshow" aria-label="Recent sets">
+        <div class="hero-tilt">
+          <div class="hero-slides"></div>
+          <img class="hero-blur" src="img/b/06.webp" width="48" height="64" alt="">
+          <div class="hero-shade" aria-hidden="true"></div>
+        </div>
+      </figure>
+      <h1 class="hero-mark" aria-label="nail(hae)"><span class="line-mask"><span class="hero-mark-in" aria-hidden="true"><span class="mk-nail">nail</span><span class="chrome">(hae)</span></span></span></h1>
+      <p class="hero-copy"><span class="in">Nails for today, tomorrow, everyday. For everyone.</span></p>
+      <p class="hero-meta label"><span class="in">Arts District, Los Angeles<br>By appointment</span></p>
+      <div class="hero-clock" role="timer" aria-live="off">
+        <span class="label clk-top">Los Angeles · PT</span>
+        <span class="clk-face" aria-hidden="true"></span>
+        <span class="label clk-date"></span>
+        <span class="sr-only clk-sr"></span>
+      </div>
+      <div class="hero-slide-cap label" aria-live="polite">
+        <span class="hsc-i">(01/08)</span>
+        <span class="hsc-bar" aria-hidden="true"><i></i></span>
+      </div>
+    </div>
+
+    <!-- 02 · Orbit -->
+    <div class="layer orbit" id="orbit">
+      <div class="orbit-space" aria-hidden="true"></div>
+      <h2 class="orbit-text" aria-label="nail(hae). Bare nail, liquid chrome, hand-painted."></h2>
+    </div>
+
+    <!-- 03 · Canvas -->
+    <div class="layer gallery" id="sets" aria-labelledby="sets-h">
+      <div class="gal-head">
+        <h2 class="gal-title" id="sets-h">(canvas)</h2>
+        <p class="gal-count label"><span class="gal-count-i">(01)</span> / 24</p>
+        <p class="gal-hint label"><span class="hint-desk">Keep scrolling</span><span class="hint-touch">Swipe</span> →</p>
+        <div class="view-toggle" role="group" aria-label="View">
+          <button type="button" class="label" data-view="strip" aria-pressed="true">Strip</button>
+          <button type="button" class="label" data-view="grid" aria-pressed="false">Grid</button>
+        </div>
+      </div>
+      <div class="gal-view">
+        <ol class="gal-track"></ol>
+      </div>
+      <div class="gal-ticks" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- 04 · Studio -->
+  <section class="finale" id="studio" aria-labelledby="studio-h">
+    <div class="fin-comp">
+      <h2 class="fin-type" id="studio-h">
+        <span class="fin-l1">Your hands,</span>
+        <span class="fin-l2 chrome-dark">next.</span>
+      </h2>
+      <figure class="fin-side fin-side-a"><img alt="" width="360" height="480" loading="lazy"></figure>
+      <figure class="fin-side fin-side-b"><img alt="" width="360" height="480" loading="lazy"></figure>
+      <figure class="fin-media"><img width="1050" height="1400" loading="lazy" alt=""></figure>
+    </div>
+    <div class="fin-info">
+      <p class="fin-copy">One artist and one chair. Gel X, builder gel and soft gel, finished in chrome, 3D or freehand. Arts District, Los Angeles, by appointment.</p>
+      <div class="fin-cta">
+        <a class="btn btn-lg" href="#book" data-go="book">Book a set <span class="arr" aria-hidden="true">→</span></a>
+        <a class="btn-text" href="https://www.instagram.com/nailhae_/" target="_blank" rel="noopener">Instagram @nailhae_ ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 · Book -->
+  <section class="booking" id="book" aria-labelledby="book-h">
+    <div class="bk-head">
+      <h2 class="bk-title" id="book-h">(book)</h2>
+      <p class="label">By appointment · We confirm every booking by message</p>
+    </div>
+    <form class="bk-grid" id="book-form" novalidate>
+      <div class="bk-prices">
+        <p class="label bk-eyebrow">Pricing</p>
+        <div class="price-list"></div>
+      </div>
+
+      <div class="bk-build">
+        <p class="label bk-eyebrow">Build your set</p>
+        <p class="bk-intro">Pick a base, a length and how much art. The estimate updates as you go.</p>
+        <div class="bk-group">
+          <p class="label" id="g-service">Base</p>
+          <div class="chips" data-group="service" role="radiogroup" aria-labelledby="g-service"></div>
+        </div>
+        <div class="bk-group" data-step="length">
+          <p class="label" id="g-length">Length</p>
+          <div class="chips" data-group="length" role="radiogroup" aria-labelledby="g-length"></div>
+        </div>
+        <div class="bk-group">
+          <p class="label" id="g-art">Art</p>
+          <div class="chips" data-group="art" role="radiogroup" aria-labelledby="g-art"></div>
+        </div>
+        <div class="bk-group">
+          <p class="label" id="g-extras">Extras</p>
+          <div class="chips" data-group="extras" role="group" aria-labelledby="g-extras"></div>
+        </div>
+        <div class="bk-fields">
+          <label class="field"><span class="label">Date</span><input id="bk-date" type="date" required></label>
+          <label class="field"><span class="label">Time</span><input id="bk-time" type="time" required></label>
+          <label class="field"><span class="label">Your name</span><input id="bk-name" autocomplete="name" required></label>
+          <label class="field"><span class="label">Phone</span><input id="bk-phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="(000) 000-0000" maxlength="14" required></label>
+          <label class="field field-wide"><span class="label">Notes (inspo, allergies, removal needed…)</span><textarea id="bk-notes" rows="2"></textarea></label>
+        </div>
+      </div>
+
+      <aside class="bk-est" aria-label="Estimate">
+        <p class="label">Estimate</p>
+        <p class="bk-total"><span class="cur">$</span><span class="bk-total-n">100</span></p>
+        <ul class="bk-lines"></ul>
+        <a class="btn btn-lg bk-send" href="https://ig.me/m/nailhae_" target="_blank" rel="noopener">Copy request &amp; open DM ↗</a>
+        <p class="bk-error" role="alert"></p>
+        <ol class="bk-steps">
+          <li>Your request is copied</li>
+          <li>Instagram opens to @nailhae_</li>
+          <li>Paste it in the message and send</li>
+        </ol>
+        <div class="bk-done" hidden>
+          <p class="label">Your request</p>
+          <textarea class="bk-msg" id="bk-msg" readonly rows="7" aria-label="Your request"></textarea>
+        </div>
+      </aside>
+    </form>
+    <footer class="fin-foot label">
+      <span>nail(hae)®</span>
+      <span>Arts District, LA <span class="clock">—</span></span>
+      <a href="#top" data-go="top">Back to the cover ↑</a>
+    </footer>
+  </section>
+</main>
+
+<!-- Canvas as a grid: an overlay, so the pinned strip underneath keeps its place -->
+<div class="grid-view" id="grid-view" role="dialog" aria-modal="true" aria-labelledby="grid-h" hidden>
+  <div class="gv-head">
+    <h2 class="gal-title" id="grid-h">(canvas)</h2>
+    <p class="label gv-count">24 sets</p>
+    <div class="view-toggle" role="group" aria-label="View">
+      <button type="button" class="label" data-view="strip" aria-pressed="false">Strip</button>
+      <button type="button" class="label" data-view="grid" aria-pressed="true">Grid</button>
+    </div>
+  </div>
+  <ol class="gv-grid"></ol>
+  <p class="label gv-foot">Tap a set to see it in the strip</p>
+</div>
+
+<div class="toast" role="status" aria-live="polite"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/render.js"></script>
+<script src="js/motion.js"></script>
+</body>
+</html>
