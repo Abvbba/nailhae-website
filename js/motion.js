@@ -109,9 +109,11 @@
     el.tickEls.forEach((t, k) => t.classList.toggle("on", k === i));
   }
 
+  let orbitLive = false;
   function tick() {
     const t = master.time();
-    if (t > 0.9 && t < 4.6) renderOrbit();
+    if (t > 0.9 && t < 4.6) { renderOrbit(); orbitLive = true; }
+    else if (orbitLive) { orbitLive = false; el.items.forEach((it) => { it.style.visibility = "hidden"; it.style.opacity = "0"; }); }
     if (!eager && t > 0.8) { eager = true; el.gImgs.forEach((im) => (im.loading = "eager")); }
     if (travel && t > travel.start - 0.3) {
       const x = gsap.getProperty(el.track, "x");
@@ -259,7 +261,7 @@
     el.navSets.classList.toggle("is-active", s === 2);
     el.navStudio.classList.toggle("is-active", s === 3);
     el.navBook.classList.toggle("is-active", s === 4);
-    $(".ui-scene").style.opacity = s === 4 ? "0" : "";
+    $(".ui-scene").style.opacity = s >= 3 ? "0" : "";
   }
 
   /* ---------- scene-aware navigation ---------- */
@@ -270,7 +272,7 @@
     else if (key === "book") y = bookTop();
     const dur = clamp(0.8, 2.6, (Math.abs(y - scrollY) / innerHeight) * 0.32);
     gsap.to(window, {
-      scrollTo: { y, autoKill: true }, duration: dur, ease: "power3.inOut",
+      scrollTo: { y, autoKill: false }, duration: dur, ease: "power3.inOut",
       onComplete: () => { if (focus) $(".g-item")?.focus({ preventScroll: true }); }
     });
   };
@@ -282,14 +284,14 @@
     const li = el.gItems[i];
     if (!li) return;
     if (!travel) {
-      gsap.to(window, { scrollTo: { y: st.end, autoKill: true }, duration: 0.9, ease: "power3.inOut",
+      gsap.to(window, { scrollTo: { y: st.end, autoKill: false }, duration: 0.9, ease: "power3.inOut",
         onComplete: () => { el.gView.scrollTo({ left: li.offsetLeft - el.gItems[0].offsetLeft, behavior: "smooth" }); li.focus({ preventScroll: true }); } });
       return;
     }
     const target = clamp(0, travel.dist, li.offsetLeft + li.offsetWidth / 2 - innerWidth / 2);
     const t = travel.start + (target / (travel.dist || 1)) * travel.dur;
     const y = st.start + (t / master.duration()) * (st.end - st.start);
-    gsap.to(window, { scrollTo: { y, autoKill: true }, duration: clamp(0.8, 2, Math.abs(y - scrollY) / innerHeight * 0.3), ease: "power3.inOut",
+    gsap.to(window, { scrollTo: { y, autoKill: false }, duration: clamp(0.8, 2, Math.abs(y - scrollY) / innerHeight * 0.3), ease: "power3.inOut",
       onComplete: () => li.focus({ preventScroll: true }) });
   };
 
@@ -302,7 +304,7 @@
     const target = clamp(0, travel.dist, li.offsetLeft + li.offsetWidth / 2 - innerWidth / 2);
     const t = travel.start + (target / (travel.dist || 1)) * travel.dur;
     const y = st.start + (t / master.duration()) * (st.end - st.start);
-    gsap.to(window, { scrollTo: { y, autoKill: true }, duration: 0.6, ease: "power2.out" });
+    gsap.to(window, { scrollTo: { y, autoKill: false }, duration: 0.6, ease: "power2.out" });
   });
   /* phones: the sheet is a native swipe row; keep the counter in step */
   el.gView.addEventListener("scroll", () => {
